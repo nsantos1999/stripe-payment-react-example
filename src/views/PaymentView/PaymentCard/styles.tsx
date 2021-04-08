@@ -21,3 +21,7 @@ export const Title = styled.span`
   padding-right: 10px;
   color: #268df8;
 `;
+
+export const Content = styled.div`
+  padding: 20px;
+`;
