@@ -38,5 +38,5 @@ export const Footer = styled.div`
   align-items: flex-end;
   flex: 1;
   /* height: 100%; */
-  padding: 20px;
+  padding: 50px;
 `;

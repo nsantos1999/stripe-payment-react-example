@@ -7,15 +7,15 @@ interface ButtonProps extends Partial<TouchableContainerProps> {
 
 export function Button({ children, ...restProps }: ButtonProps) {
   return (
-    <TouchableContainer
+    <motion.div
       whileHover={{
-        scale: 1.05,
-        transition: { duration: 0.1 },
+        scale: 1.1,
       }}
-      whileTap={{ scale: 0.9, transition: { duration: 0.1 } }}
-      {...restProps}
+      transition={{ type: "spring", mass: 0.5 }}
+      whileTap={{ scale: 0.9 }}
+      style={{ width: "100%" }}
     >
-      {children}
-    </TouchableContainer>
+      <TouchableContainer {...restProps}>{children}</TouchableContainer>
+    </motion.div>
   );
 }

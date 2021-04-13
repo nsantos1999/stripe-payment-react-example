@@ -7,12 +7,9 @@ export type TouchableContainerProps = {
   fullWidth?: boolean;
 };
 
-export const TouchableContainer = styled(
-  motion.button
-)<TouchableContainerProps>`
+export const TouchableContainer = styled.button<TouchableContainerProps>`
   justify-content: center;
   align-items: center;
-  padding: 10px;
   border-radius: 10px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 8px;
