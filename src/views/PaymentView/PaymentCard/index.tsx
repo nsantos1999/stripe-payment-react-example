@@ -1,9 +1,15 @@
 import Lottie from "react-lottie";
 import creditCard from "../../../animations/credit-card.json";
 import { Card } from "../../../components/Card";
-import { CardElement } from "@stripe/react-stripe-js";
+import {
+  CardNumberElement,
+  CardExpiryElement,
+  CardCvcElement,
+} from "@stripe/react-stripe-js";
 
-import { Content, Header, Title } from "./styles";
+import { Content, Footer, Header, RowContainer, Title } from "./styles";
+import { InputContainer } from "../../../components/InputContainer";
+import { Button } from "../../../components/Button";
 
 const defaultOptions = {
   loop: true,
@@ -24,31 +30,24 @@ export function PaymentCard() {
       </Header>
       {/* </Container> */}
       <Content>
-        <CardElement
-          options={{
-            iconStyle: "solid",
-            style: {
-              base: {
-                iconColor: "#c4f0ff",
-                color: "#fff",
-                fontWeight: 500,
-                fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
-                fontSize: "16px",
-                fontSmoothing: "antialiased",
-                ":-webkit-autofill": {
-                  color: "#fce883",
-                },
-                "::placeholder": {
-                  color: "#87bbfd",
-                },
-              },
-              invalid: {
-                color: "#9e2146",
-              },
-            },
-          }}
-        />
+        <InputContainer title="Número do cartão" fullWidth>
+          <CardNumberElement />
+        </InputContainer>
+        <RowContainer>
+          <InputContainer title="Data de expiração" fullWidth>
+            <CardExpiryElement />
+          </InputContainer>
+
+          <InputContainer title="CVC" fullWidth>
+            <CardCvcElement />
+          </InputContainer>
+        </RowContainer>
       </Content>
+      <Footer>
+        <Button color="#268DF8" fullWidth>
+          Confirmar
+        </Button>
+      </Footer>
     </Card>
   );
 }

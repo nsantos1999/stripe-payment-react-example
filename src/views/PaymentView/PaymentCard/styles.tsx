@@ -25,3 +25,18 @@ export const Title = styled.span`
 export const Content = styled.div`
   padding: 20px;
 `;
+
+export const RowContainer = styled.div`
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 18vw auto;
+`;
+
+export const Footer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1;
+  /* height: 100%; */
+  padding: 20px;
+`;
