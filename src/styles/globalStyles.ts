@@ -5,7 +5,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background: #fff;
-    font-family: Open-Sans, Helvetica, Sans-Serif;
+    font-family: Courier New, Arial, Helvetica, sans-serif;
+  }
+  * {
+    /* font-family:Star Wars,arial,helvetica; */
   }
 `;
 

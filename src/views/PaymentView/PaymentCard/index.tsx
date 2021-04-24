@@ -10,6 +10,7 @@ import {
 import { Content, Footer, Header, RowContainer, Title } from "./styles";
 import { InputContainer } from "../../../components/InputContainer";
 import { Button } from "../../../components/Button";
+import { Input } from "../../../components/Input";
 
 const defaultOptions = {
   loop: true,
@@ -30,6 +31,7 @@ export function PaymentCard() {
       </Header>
       {/* </Container> */}
       <Content>
+        <Input title="Nome" />
         <InputContainer title="Número do cartão" fullWidth>
           <CardNumberElement />
         </InputContainer>
