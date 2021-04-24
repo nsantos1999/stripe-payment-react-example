@@ -1,7 +1,10 @@
 import { TouchableContainer, TouchableContainerProps } from "./styles";
 import { motion } from "framer-motion";
+import { Title } from "../../styles/text";
 
-interface ButtonProps extends Partial<TouchableContainerProps> {
+interface ButtonProps
+  extends Partial<TouchableContainerProps>,
+    React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
 
@@ -15,7 +18,15 @@ export function Button({ children, ...restProps }: ButtonProps) {
       whileTap={{ scale: 0.9 }}
       style={{ width: "100%" }}
     >
-      <TouchableContainer {...restProps}>{children}</TouchableContainer>
+      <TouchableContainer {...restProps}>
+        {typeof children === "string" ? (
+          <Title color="#fff" size="1rem">
+            {children}
+          </Title>
+        ) : (
+          children
+        )}
+      </TouchableContainer>
     </motion.div>
   );
 }

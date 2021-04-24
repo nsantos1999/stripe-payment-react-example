@@ -29,5 +29,4 @@ export const TouchableContainer = styled.button<TouchableContainerProps>`
   &:focus {
     outline: none !important;
   }
-  padding: 15px;
 `;

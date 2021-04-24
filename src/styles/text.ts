@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 type TextProps = {
-  size?: number;
+  size?: string;
   color?: string;
   bold?: boolean;
 };

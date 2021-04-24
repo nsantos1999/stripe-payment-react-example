@@ -9,7 +9,7 @@ export function PaymentDetail() {
     <Card minWidth={600}>
       <Container>
         <Header>
-          <Title color="#fff">Product Detail</Title>
+          <Title color="#fff">Shopping Cart</Title>
         </Header>
         <Divisor />
         <OrderList />
